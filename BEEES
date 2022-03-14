@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lola's bees</title>
+  
+<script src = "https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"> <!This imports the graph extension!>
+</script>
+    
+   
+   <canvas id="Mychart1" style="width:100%;max-width:800px"></canvas> <!Creates the outline for the chart in HTML!>
+
+<script> <!First Line Chart!>
+var xValues = ['1:00 am March 10th','6:00 am march 10th', '12:00 pm march 10th','1:00 am march 11th', '6:00 am march 11th','12:00 pm march 11th,']
+var yValues = [23.4,24.5,24.3,25.5,25.5,26.0]<!Temperature Values!>
+var myChart = new Chart("Mychart1", {
+  type: "line",
+  data: { labels: xValues,
+    datasets: [{
+        label: "Temperature",
+        backgroundColor: "rgba(0,0,0,0.1)",
+      borderColor: "FF0000",
+      data: yValues
+  }]},
+  options: {}
+});
+</script>
+
+<canvas id="Mychart2" style="width:100%;max-width:800px", <!text-align: right></canvas> <Outline in HTML for second graph!>
+
+<script> <!Graph NUMBER 2!!>
+
+var xValues = ['1:00 am March 10th','6:00 am march 10th', '12:00 pm march 10th','1:00 am march 11th', '6:00 am march 11th','12:00 pm march 11th,']
+var yValues = [4.5,4.3,4.6,4.7,4.6,4.6,]
+var myChart = new Chart("Mychart2", {
+  type: "line",
+  data: { labels: xValues,
+    datasets: [{
+        label: "Humidity",
+        backgroundColor: "rgba(0,0,0,0.1)",
+      borderColor: "#00FFFF",
+      data: yValues
+  }]},
+  options: {}
+});
+</script>
+<canvas id="Mychart3" style="width:100%;max-width:800px", text-align: right></canvas>
+
+<script> <!GRAPH NUMBER 3>
+
+var xValues = ['1:00 am March 10th','6:00 am march 10th', '12:00 pm march 10th','1:00 am march 11th', '6:00 am march 11th','12:00 pm march 11th,']
+var yValues = [103,105,104,110,102,102,]
+var myChart = new Chart("Mychart3", {
+  type: "line",
+  data: { labels: xValues,
+    datasets: [{
+        label: "Weight",
+        backgroundColor: "rgba(0,0,0,0.1)",
+      borderColor: "#00FF00",
+      data: yValues
+  }]},
+  options: {}
+});
+</script>
